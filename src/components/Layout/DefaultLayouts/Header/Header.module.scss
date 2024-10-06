@@ -1,0 +1,53 @@
+.wrapper {
+    height: 63px;
+    width: 100%;
+    background-color: var(--bachground-color);
+    box-shadow: 0px 3px 3px rgb(0 0 0 / 12%);
+}
+
+.inner {
+    height: 100%;
+    width: var(--primary-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.logo-link {
+    display: flex;
+    height: 100%;
+    font-size: 20px;
+}
+
+.school-name {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.menu-header {
+    width: 100%;
+    border-top: 2px solid white;
+}
+
+.content-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-hello {
+    padding-left: 20px;
+}
+
+.logout{
+    margin-left: 20px;
+}
+
+.logout a{
+    color:var(--primary-color);
+    font-weight: 600;
+}

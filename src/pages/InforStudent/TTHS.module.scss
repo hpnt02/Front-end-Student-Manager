@@ -1,0 +1,45 @@
+.wrapper {
+    width: 100%;
+    min-height: var(--min-height);
+    background-color: var(--background-content);
+}
+
+.inner {
+    width: var(--primary-width);
+    margin: 0px auto;
+    padding: 20px 0;
+  
+}
+
+
+.tths {
+    background-color: var(--bachground-white);
+  
+    min-height: var(--min-height);
+}
+
+.tths-title{
+    text-align: center;
+    padding-top: 20px 
+}
+
+.infor-student {
+    width:80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 49% 49%;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 2rem;
+}
+
+.header-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-icon{
+    color: var(--primary-color);
+    cursor: pointer;
+}

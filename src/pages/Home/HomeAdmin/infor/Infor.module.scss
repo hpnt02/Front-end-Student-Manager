@@ -1,0 +1,20 @@
+.wrapper {
+    width: 100%;
+    background-color: white;
+}
+
+.infor-title {
+    padding-top: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.infor-student {
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 49% 49%;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 2rem;
+}

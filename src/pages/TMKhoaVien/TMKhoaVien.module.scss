@@ -1,0 +1,25 @@
+.header-kv{
+    height: 50px;
+    width: 100%;
+}
+
+.innerrr{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+}
+
+.them-moi{
+    display: flex;
+    justify-content: space-between;
+}
+
+.width-themmoi{
+    width: 33.33%; 
+    padding: 10px;
+  
+}

@@ -1,0 +1,44 @@
+
+
+th{
+    padding: 0 !important;
+    border: 1px solid black !important;
+    background-color: #0099FF;
+    color:white !important;
+    font-weight: 700 !important;
+}
+
+td{
+    border: 1px solid black  !important;
+}
+
+ td.none-border-right{
+    border-right: none !important;
+}
+
+td.none-border-left{
+    border-left: none !important;
+}
+
+.none-border-top{
+    border-top: none !important;
+}
+
+.none-border-bottom{
+    border-bottom: none !important;
+}
+
+.none-padding{
+    padding: 5px !important;
+    font-size: 15px;
+}
+
+
+.height-header{
+    height: 50px;
+}
+
+.none-bold{
+    font-weight: 600 !important;
+
+}

@@ -1,0 +1,58 @@
+.header-kv{
+    height: 50px;
+    width: 100%;
+}
+
+.innerrr{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+}
+
+
+
+.table-tkb{
+    width: 98%;
+    margin: 0 auto;
+}
+
+
+.trash-icon{
+    color: red;
+    cursor: pointer;
+}
+
+.icon-list{
+    color:var(--primary-color)
+}
+
+.edit-icon{
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+.inforMH-icon{
+    margin-right: 10px;
+    color:rgb(10, 228, 228);
+}
+
+.button-create{
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.tool{
+    text-align: center;
+}

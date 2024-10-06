@@ -1,0 +1,59 @@
+
+
+
+.table-tkb{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.trash-icon{
+    color: red;
+    cursor: pointer;
+}
+
+.edit-icon{
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+.button-create{
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.new-teacher{
+    padding: 3px;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+.create-lophoc {
+    display: none;
+    position: fixed;
+    background-color:  rgba(7, 7, 7, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .create-lophoc.visible {
+    display: block;
+  }
+
+  .infor-icon{
+    color: rgb(131, 227, 227);
+    margin-right: 10px;
+}

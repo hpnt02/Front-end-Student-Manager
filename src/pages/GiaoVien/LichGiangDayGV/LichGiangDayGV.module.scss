@@ -1,0 +1,76 @@
+.wrapper {
+    width: var(--primary-width);
+    margin: 20px auto;
+    min-height: var(--min-height);
+}
+
+.title-timetable {
+    border: 1px solid black;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 20px 0;
+}
+
+
+.table-tkb {
+    width: 100%;
+    text-align: center;
+}
+
+.page-address {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    padding: 0 10px;
+}
+
+a {
+    color: black;
+}
+
+.infor-icon{
+    color: rgb(131, 227, 227);
+    margin-right: 10px;
+}
+
+
+.input-timetable {
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid black;
+    width: 100%;
+    background-color: white;
+}
+
+.input-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.mr{
+ padding-right: 15px;
+}
+
+.input-option {
+    width: 15%;
+    margin-left: 7px;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.search-timetable {
+    font-size: 1rem;
+    margin-left: 25px;
+    height: 30px;
+    width: 20%;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    cursor: pointer;
+    text-align: center;
+}

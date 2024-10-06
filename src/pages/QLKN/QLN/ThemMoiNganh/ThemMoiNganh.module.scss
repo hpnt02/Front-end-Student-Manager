@@ -1,0 +1,36 @@
+
+
+.bgr-content{
+    background-color: white;
+    height: 100%;
+}
+.form-create{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    justify-content: space-between;
+}
+
+
+.width-input{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.chon-lop{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button-class{
+    text-align: center;
+    margin: 20px;
+ }
+ 
+
+ input[type=text].input-class{
+    width: 100% !important;
+    border: 1px solid black;
+}

@@ -1,0 +1,247 @@
+@import 'normalize.css';
+:root {
+    --text-white: white;
+    --bachground-white: white;
+    --primary-color: #005cb7da;
+    --min-height: calc(100vh - 63px - 138px);
+    --primary-width: 85%;
+    --background-content: #e7ebee;
+    --background-rgba: rgba(0, 92, 184,0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapperr{
+    margin-bottom: 20px;
+    margin-top: 7px;
+  }
+.innerr{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.infor {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 49% 49%;
+    padding-left: 90px;
+    padding-top: 15px;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.bgr-content{
+    padding-bottom: 20px;
+    min-height: var(--min-height);
+    background-color:var(--bachground-white);
+}
+
+.new-create{
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--background-rgba)
+    }
+}
+
+.format-button{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.button-submit{
+width: 50%;
+height: 35px;
+background-color: var(--primary-color);
+color: var(--text-white);
+font-size: 1rem;
+font-weight: 700;
+border: none;
+&:hover{
+    cursor: pointer;
+    background-color: var(--background-rgba)
+}
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+    .edit-icon{
+        color: var(--primary-color);
+        margin-right: 10px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .trash-icon{
+        color: red;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+strong,
+.title{
+   color: var(--primary-color);
+   padding-top: 20px;
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+td{
+    padding: 10px;
+}
+
+.button-panigate{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.button-panigate-next-prev{
+    margin: 20px;
+    width: 10%;
+    padding:10px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.3;
+    }
+}
+
+.header-kv{
+    height: 50px;
+    width: 100%;
+}
+
+.innerrr{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+}
+
+.total-study {
+    background-color: rgb(117, 233, 192);
+    height:48%;
+}
+
+.infor-exam {
+    background-color: orange;
+    height: 48%;
+}
+
+.item a {
+    color: red;
+}
+
+.title-home{
+    font-size: 1.2rem;
+    padding-left: 20px;
+    color: var(--primary-color)
+}
+
+.count{
+    font-size: 1.5rem;
+    color: var(--primary-color)
+}
+
+.totel-icon{
+    color: var(--primary-color)
+}
+
+.come-back{
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--background-rgba)
+    }
+}
+
+.title-table{
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0.8;
+    padding-top: 10px;
+    font-style: italic;
+   }
+
+   .label-title{
+    font-size: 1.4rem;
+   }
+
+   .checkbox-label {
+    display: flex;
+    align-items: center;
+    
+    margin-right:10px
+  }
+  
+//   .gender-checkbox {
+//     display: none;
+//   }
+  
+
+.tool{
+    display:flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.search{
+    width:50%
+}
+
+.infor-new{
+    width: 80%;
+    margin: 0 auto;
+      display: grid;
+      gap: 2%;
+      grid-template-columns: 49% 49%;
+      padding-left: 20px;
+      padding-top: 15px;
+      line-height: 2rem;
+  }
+  
+  .export-data{
+    text-align: right;
+    margin: 0 10px 15px 0;
+}
+
+.export-excel{
+    margin-left: 15px;
+}

@@ -1,0 +1,88 @@
+
+
+.button-create {
+  margin-bottom: 23px;
+text-align: center;
+}
+
+.table-tkb{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.add-icon{
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.infor-icon{
+    color: rgb(131, 227, 227);
+    margin-right: 10px;
+}
+
+
+.input-timetable {
+  
+    width: 100%;
+    background-color: white;
+}
+
+.form-time{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 20px 67px 10px 67px;
+}
+.input-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-left: 0;
+}
+
+.mr{
+ padding-right: 15px;
+}
+
+.ml{
+    margin-left: 15px;
+}
+
+.input-option {
+    width: 50%;
+    margin-left: 7px;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.search-timetable {
+    font-size: 1rem;
+    margin-left: 25px;
+    height: 30px;
+    width: 20%;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    cursor: pointer;
+    text-align: center;
+}
+
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.input-search{
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+input[type=text]{
+    margin-bottom: 26px
+}

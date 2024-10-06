@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    background-color: rgb(236, 235, 235);
+    height: 600px;
+    width: 100%;
+}
+
+.inner {
+    width: var(--primary-width);
+    margin: 0 auto;
+}
+.infor {
+    height: 200px;
+    margin-top: 1rem;
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 65% 33%;
+}
+
+.menu {
+    padding: 20px 0;
+}
+
+.menu-item {
+    color: black;
+}

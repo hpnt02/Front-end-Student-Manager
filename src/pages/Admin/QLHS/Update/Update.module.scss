@@ -1,0 +1,49 @@
+
+
+.bgr-content{
+    background-color: var(--bachground-white);
+    min-height: var(--min-height);
+}
+
+
+.format-button{
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+  
+}
+.form-create{
+    width: 100%;
+    background-color: white;
+}
+
+
+.gioitinh {
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+
+  
+  .gender-checkbox:checked + .checkbox-custom {
+    background-color: #000;
+  }
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    align-items: center;
+  }
+  
+  .chon-lop{
+    width: 90%;
+    padding: 10px ;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  input{
+    border: 1px solid black
+  }

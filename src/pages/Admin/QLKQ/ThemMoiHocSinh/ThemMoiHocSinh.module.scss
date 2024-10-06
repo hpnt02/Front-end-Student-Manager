@@ -1,0 +1,52 @@
+
+.wrapperrr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(146, 129, 129, 0.3);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    z-index: 9999;
+  }
+  
+  .innerrr {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+
+.table-tkb{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.infor-lichhoc {
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 49% 49%;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.form-create{
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.select-option{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.chon-hocsinh{
+    width: 100%;
+    padding: 10px ;
+    text-align: center;
+    margin: 20px auto;
+  }

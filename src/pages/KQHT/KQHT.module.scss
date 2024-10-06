@@ -1,0 +1,30 @@
+.wrapper {
+    width: 100%;
+    min-height: var(--min-height);
+    background-color: var(--background-content);
+}
+
+.inner {
+    width: var(--primary-width);
+    margin: 0px auto;
+    padding: 20px 0;
+}
+
+.table-kqht {
+    background-color: var(--bachground-white);
+    padding: 10px;
+}
+
+.table-tkb {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.time {
+    background-color: #f2f8f8;
+}
+
+.diemkiemtra {
+    color: red;
+}

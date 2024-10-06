@@ -1,0 +1,38 @@
+.header-kv{
+    height: 50px;
+    width: 100%;
+}
+
+.innerrr{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+}
+
+.form-create{
+    width: 100%;
+    background-color: white;
+}
+.button-center{
+    text-align: center;
+    width: 50%;
+    margin:  auto;
+    padding-top: 20px;
+  }
+
+.infor-newstudent{
+   
+    gap: 2%;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 2rem;
+}
+
+.witdh-input{
+    width: 80%;
+    margin:  auto;
+  }

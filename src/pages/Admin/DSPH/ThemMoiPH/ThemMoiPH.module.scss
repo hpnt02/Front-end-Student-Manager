@@ -1,0 +1,20 @@
+
+.form-create{
+    background-color: white;
+}
+
+.form-create{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.infor-newstudent{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+}
+
+input[type="text"]{
+    width: 100%;
+}
+

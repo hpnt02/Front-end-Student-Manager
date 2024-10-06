@@ -1,0 +1,71 @@
+
+
+.button-create{
+    width: 95%;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.table-tkb{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.info-monhoc{
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 49% 49%;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 2rem;
+   text-align: center;
+   width: 80%;
+   margin: 0 auto;
+   margin-bottom: 20px;
+}
+
+.infor-icon{
+    color: rgb(131, 227, 227);
+    margin-right: 10px;
+}
+
+.diem{
+    font-weight: 650;
+}
+
+.center{
+    text-align: center;
+}
+
+.infor-student {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 49% 49%;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.import-excel{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Màu nền */
+    color: white; /* Màu chữ */
+    border-radius: 5px; /* Bo góc */
+    text-align: center; /* Căn giữa chữ */
+}
+
+.export-data{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+
+.selectedFileName{
+    padding: 0 5px;
+}

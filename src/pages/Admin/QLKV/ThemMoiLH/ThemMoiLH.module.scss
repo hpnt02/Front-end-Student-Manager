@@ -1,0 +1,44 @@
+
+
+.bgr-content{
+    background-color: white;
+}
+
+.form-create{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+
+
+.width-input{
+    width: 90%;
+    margin: 0 auto;
+}
+
+input[type=text].input-class{
+    width: 100% !important;
+    border: 1px solid black;
+}
+
+.chon-lop{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button-class{
+   text-align: center;
+   margin: 20px;
+}
+
+select{
+    margin-bottom: 15px;
+}
+
+option{
+    margin: 5px ;
+    cursor: pointer;
+}

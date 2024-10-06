@@ -1,0 +1,81 @@
+.option{
+    display: flex;
+    align-items: center;
+     justify-content: space-between;
+}
+
+.come-back{
+    margin-bottom: 20px ;
+}
+
+.table-tkb{
+    width: 100%;
+    margin: 0 auto;
+
+}
+.wrapper {
+    width: 85%;
+    margin: 20px auto;
+    min-height: var(--min-height);
+    z-index: 0;
+}
+.title-timetable {
+    border: 1px solid black;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 20px 0;
+}
+
+.input-timetable {
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid black;
+    width: 100%;
+    background-color: rgb(196, 218, 231);
+}
+
+
+.input-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.input-option {
+    width: 15%;
+    margin-left: 7px;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+}
+.search-timetable {
+    font-size: 1rem;
+    margin-left: 25px;
+    height: 30px;
+    width: 12%;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+.create{
+    border: 1px solid black;
+    border-top: none;
+    padding: 15px;
+    width: 100%;
+    text-align: right;
+}
+
+.button-submit{
+    width: 20%;
+    height: 35px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--background-rgba)
+    }
+    }

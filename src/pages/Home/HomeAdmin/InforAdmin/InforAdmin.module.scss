@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.title-total{
+    height: 30%;
+    padding-top: 10px;
+}
+
+.total-student{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 80%;
+    margin: 0 auto;
+    
+}

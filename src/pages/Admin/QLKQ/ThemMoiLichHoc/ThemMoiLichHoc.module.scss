@@ -1,0 +1,95 @@
+.form-create{
+    background-color: white;
+}
+
+label{
+    padding-left: 0;
+}
+
+.form-create{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.infor-newstudent{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    align-items: center;
+}
+
+input[type=text].input-lichhoc{
+    width: 100% !important; 
+    padding-left: 15px;
+}
+
+input[type=date].input-lichhoc{
+  width: 100% !important; 
+  padding-left: 15px;
+}
+
+
+.chon-lop{
+    width: 100%;
+    padding: 10px ;
+    text-align: center;
+    margin: 15px 0;
+    height:45px;
+    border: 1px solid black;
+  }
+
+
+  .brg-content{
+    background-color: red;
+  }
+
+  .pt{
+    padding-top: 18px;
+  }
+
+  .pdt{
+    padding-top: 13px;
+  }
+  .format-button{
+    width: 100%;
+    text-align: right;
+  }
+
+  .form-create{
+    width: 100%;
+    background-color: white;
+}
+
+  .format-button{
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .come-back{
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 21%;
+    height: 35px;
+    border: none;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--background-rgba)
+    }
+}
+
+.infor-new{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.infor-LichHoc{
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+  justify-content: center;
+  align-items: center;
+}
