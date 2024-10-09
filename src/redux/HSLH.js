@@ -1,28 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const HSLH = createSlice({
-    name:"hslh",
+    name: 'hslh',
     initialState: {
-        hslh:{
-            hslh:[],
-            isFetching: false,
-            error: false
-        },
-        hstlh:{
-            hstlh:[],
-            isFetching: false,
-            error: false
-        },
-        tmlhhs:{
+        hslh: {
+            hslh: [],
             isFetching: false,
             error: false,
-            success: false
         },
-        
+        hstlh: {
+            hstlh: [],
+            isFetching: false,
+            error: false,
+        },
+        tmlhhs: {
+            isFetching: false,
+            error: false,
+            success: false,
+        },
     },
-    reducers:{
-        getHSLHStart:(state) =>{
-            state.hslh.isFetching = true
+    reducers: {
+        getHSLHStart: (state) => {
+            state.hslh.isFetching = true;
         },
         getHSLHSuccess: (state, action) => {
             state.hslh.isFetching = false;
@@ -33,8 +32,8 @@ const HSLH = createSlice({
             state.hslh.isFetching = false;
             state.hslh.error = true;
         },
-        getHSTLHStart:(state) =>{
-            state.hstlh.isFetching = true
+        getHSTLHStart: (state) => {
+            state.hstlh.isFetching = true;
         },
         getHSTLHSuccess: (state, action) => {
             state.hstlh.isFetching = false;
@@ -48,40 +47,44 @@ const HSLH = createSlice({
         TMLHHSStart: (state) => {
             state.tmlhhs.isFetching = true;
         },
-       TMLHHSSuccess: (state, action) => {
+        TMLHHSSuccess: (state, action) => {
             state.tmlhhs.isFetching = false;
             state.tmlhhs.error = false;
-            state.tmlhhs.success = true
+            state.tmlhhs.success = true;
         },
-      TMLHHSFailed: (state) => {
+        TMLHHSFailed: (state) => {
             state.tmlhhs.isFetching = false;
             state.tmlhhs.error = true;
-            state.tmlhhs.success = false
+            state.tmlhhs.success = false;
+        },
+        deleteHSLHStart: (state) => {
+            state.hslh.isFetching = true;
+        },
+        deleteHSLHSuccess: (state, action) => {
+            state.hslh.isFetching = false;
+            state.hslh.error = false;
+            state.hslh.hslh = state.hslh.hslh.filter((user) => user._id !== action.payload);
+        },
+        deleteHSLHFailed: (state, action) => {
+            state.hslh.isFetching = false;
+            state.hslh.error = true;
+        },
     },
-    deleteHSLHStart: (state) =>{
-        state.hslh.isFetching = true
-    },
-    deleteHSLHSuccess: (state,action) => {
-        state.hslh.isFetching = false;
-        state.hslh.error = false;
-        state.hslh.hslh = state.hslh.hslh.filter(user => user._id !== action.payload);
-    },
-    deleteHSLHFailed: (state,action) => {
-        state.hslh.isFetching = false;
-        state.hslh.error = true;
-    },
-    }
-})
+});
 
-export const { getHSLHFailed, getHSLHStart, getHSLHSuccess,getHSTLHStart,
+export const {
+    getHSLHFailed,
+    getHSLHStart,
+    getHSLHSuccess,
+    getHSTLHStart,
     getHSTLHSuccess,
     getHSTLHFailed,
     TMLHHSStart,
-TMLHHSSuccess,
-TMLHHSFailed,
-deleteHSLHStart,
-deleteHSLHSuccess,
-deleteHSLHFailed
+    TMLHHSSuccess,
+    TMLHHSFailed,
+    deleteHSLHStart,
+    deleteHSLHSuccess,
+    deleteHSLHFailed,
 } = HSLH.actions;
 
 export default HSLH.reducer;

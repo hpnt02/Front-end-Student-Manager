@@ -1,17 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const userSlice = createSlice({
-    name:"user",
+    name: 'user',
     initialState: {
-        users:{
-            allUsers:null,
+        users: {
+            allUsers: null,
             isFetching: false,
-            error: false
-        },   
+            error: false,
+        },
     },
-    reducers:{
-        getUserStart:(state) =>{
-            state.users.isFetching = true
+    reducers: {
+        getUserStart: (state) => {
+            state.users.isFetching = true;
         },
         getUserSuccess: (state, action) => {
             state.users.isFetching = false;
@@ -22,8 +22,8 @@ const userSlice = createSlice({
             state.users.isFetching = false;
             state.users.error = true;
         },
-        getStudentStart:(state) =>{
-            state.student.isFetching = true
+        getStudentStart: (state) => {
+            state.student.isFetching = true;
         },
         getStudentSuccess: (state, action) => {
             state.student.isFetching = false;
@@ -34,26 +34,23 @@ const userSlice = createSlice({
             state.student.isFetching = false;
             state.student.error = true;
         },
-        deleteUserStart: (state) =>{
-            state.users.isFetching = true
+        deleteUserStart: (state) => {
+            state.users.isFetching = true;
         },
-        deleteUserSuccess: (state,action) => {
+        deleteUserSuccess: (state, action) => {
             state.users.isFetching = false;
             state.users.error = false;
-            state.users.allUsers = state.users.allUsers.filter(user => user._id !== action.payload);
+            state.users.allUsers = state.users.allUsers.filter((user) => user._id !== action.payload);
         },
-        deleteUserFailed: (state,action) => {
+        deleteUserFailed: (state, action) => {
             state.users.isFetching = false;
             state.users.error = true;
             state.msg = action.payload;
         },
-    }
-})
+    },
+});
 
-export const { getUserFailed, getUserStart, getUserSuccess,
-    deleteUserStart,
-    deleteUserSuccess,
-    deleteUserFailed,
-} = userSlice.actions;
+export const { getUserFailed, getUserStart, getUserSuccess, deleteUserStart, deleteUserSuccess, deleteUserFailed } =
+    userSlice.actions;
 
 export default userSlice.reducer;

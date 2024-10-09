@@ -3,24 +3,23 @@ import styles from './HomeStudent.module.scss';
 import config from '~/config';
 import Infor from './infor';
 import InforStudy from './InforStudy';
-import Menu, { MenuItem } from '~/components/Menu'
+import Menu, { MenuItem } from '~/components/Menu';
 import { InforIcon, KHHTIcon, KQHTIcon, LTIcon, LVPIcon, TimeTableIcon } from '~/components/Icons/icons';
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { DSHS, DSLH, GiaoVien, getMonHoc, getNGANH } from "~/redux/apiAdmin/apiAdmin";
-
+import { DSHS, DSLH, GiaoVien, getMonHoc, getNGANH } from '~/redux/apiAdmin/apiAdmin';
 
 const cx = classNames.bind(styles);
 
 function HomeStudent() {
-const dispatch = useDispatch()
-useEffect(() =>{
-    getMonHoc(dispatch)
-    getNGANH(dispatch)
- DSLH(dispatch)
-    GiaoVien(dispatch)
-    DSHS( dispatch)
-},[dispatch])
+    const dispatch = useDispatch();
+    useEffect(() => {
+        getMonHoc(dispatch);
+        getNGANH(dispatch);
+        DSLH(dispatch);
+        GiaoVien(dispatch);
+        DSHS(dispatch);
+    }, [dispatch]);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>

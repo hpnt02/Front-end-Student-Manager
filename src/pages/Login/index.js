@@ -24,18 +24,19 @@ function Login() {
     return (
         <div className={cx('login-container')}>
             <div className={cx('modal')}>
-                <form onSubmit={handleSubmit} >
+                <form onSubmit={handleSubmit}>
                     {/* <h2 className={cx('title')}>HỆ THỐNG QUẢN LÝ NHÀ TRƯỜNG </h2> */}
                     <div className={cx('login-title')}>Đăng nhập</div>
                     <label className={cx('label-input')}>Tên đăng nhập</label>
-                    <input className={cx("input-username")}
+                    <input
+                        className={cx('input-username')}
                         type="text"
                         placeholder="Vui lòng nhập tên đăng nhập"
                         onChange={(e) => setUserName(e.target.value)}
                     />
                     <label className={cx('label-input')}>Mật khẩu</label>
                     <input
-                    className={cx("input-password")}
+                        className={cx('input-password')}
                         type="password"
                         placeholder="Vui lòng nhập mật khẩu"
                         onChange={(e) => setPassword(e.target.value)}

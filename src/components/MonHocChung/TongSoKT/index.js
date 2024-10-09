@@ -1,13 +1,10 @@
 
-
-
 import { useDispatch} from "react-redux";
 import { useEffect } from "react";
 import { getMonHoc } from "~/redux/apiAdmin/apiAdmin";
 
 
 function ToTal({children, title}) {
-
 
   const dispatch = useDispatch()
   const totalItem = children.map((item) => {

@@ -1,18 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const DiemRenLuyen = createSlice({
-    name:"diemrenluyen",
+    name: 'diemrenluyen',
     initialState: {
-        diemrenluyen:{
-            diemrenluyen:[],
+        diemrenluyen: {
+            diemrenluyen: [],
             isFetching: false,
-            error: false
+            error: false,
         },
     },
-    reducers:{
-        getDiemRenLuyenStart:(state) =>{
-            state.diemrenluyen.isFetching = true
+    reducers: {
+        getDiemRenLuyenStart: (state) => {
+            state.diemrenluyen.isFetching = true;
         },
         getDiemRenLuyenSuccess: (state, action) => {
             state.diemrenluyen.isFetching = false;
@@ -23,10 +22,9 @@ const DiemRenLuyen = createSlice({
             state.diemrenluyen.isFetching = false;
             state.diemrenluyen.error = true;
         },
-    }
-})
+    },
+});
 
-export const { getDiemRenLuyenFailed, getDiemRenLuyenStart, getDiemRenLuyenSuccess,
-} = DiemRenLuyen.actions;
+export const { getDiemRenLuyenFailed, getDiemRenLuyenStart, getDiemRenLuyenSuccess } = DiemRenLuyen.actions;
 
 export default DiemRenLuyen.reducer;

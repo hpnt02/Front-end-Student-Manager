@@ -1,23 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const LichHoc = createSlice({
-    name:"lichhoc",
+    name: 'lichhoc',
     initialState: {
-        lichhoc:{
-            lichhoc:[],
+        lichhoc: {
+            lichhoc: [],
             isFetching: false,
             error: false,
-            success: false
+            success: false,
         },
-        tmlichhoc:{
+        tmlichhoc: {
             isFetching: false,
             error: false,
-            success: false
-        },      
+            success: false,
+        },
     },
-    reducers:{
-        getLichHocStart:(state) =>{
-            state.lichhoc.isFetching = true
+    reducers: {
+        getLichHocStart: (state) => {
+            state.lichhoc.isFetching = true;
         },
         getLichHocSuccess: (state, action) => {
             state.lichhoc.isFetching = false;
@@ -31,44 +31,47 @@ const LichHoc = createSlice({
         TMLichHocStart: (state) => {
             state.tmlichhoc.isFetching = true;
             state.tmlichhoc.error = false;
-            state.tmlichhoc.success = false
+            state.tmlichhoc.success = false;
         },
-       TMLichHocSuccess: (state, action) => {
+        TMLichHocSuccess: (state, action) => {
             state.tmlichhoc.isFetching = false;
             state.tmlichhoc.error = false;
-            state.tmlichhoc.success = true
+            state.tmlichhoc.success = true;
         },
-      TMLichHocFailed: (state) => {
+        TMLichHocFailed: (state) => {
             state.tmlichhoc.isFetching = false;
             state.tmlichhoc.error = true;
-            state.tmlichhoc.success = false
+            state.tmlichhoc.success = false;
         },
-        deleteLichHocStart: (state) =>{
-            state.lichhoc.isFetching = true
+        deleteLichHocStart: (state) => {
+            state.lichhoc.isFetching = true;
             state.lichhoc.error = false;
-            state.lichhoc.success = false
+            state.lichhoc.success = false;
         },
-        deleteLichHocSuccess: (state,action) => {
+        deleteLichHocSuccess: (state, action) => {
             state.lichhoc.isFetching = false;
             state.lichhoc.error = false;
             state.lichhoc.success = true;
-            state.lichhoc.lichhoc = state.lichhoc.lichhoc.items.filter(user => user._id !== action.payload);
+            state.lichhoc.lichhoc = state.lichhoc.lichhoc.items.filter((user) => user._id !== action.payload);
         },
-        deleteLichHocFailed: (state,action) => {
+        deleteLichHocFailed: (state, action) => {
             state.lichhoc.isFetching = false;
             state.lichhoc.error = true;
             state.lichhoc.success = false;
-
         },
-    }
-})
+    },
+});
 
-export const { getLichHocFailed, getLichHocStart, getLichHocSuccess,TMLichHocStart,
+export const {
+    getLichHocFailed,
+    getLichHocStart,
+    getLichHocSuccess,
+    TMLichHocStart,
     TMLichHocSuccess,
     TMLichHocFailed,
     deleteLichHocStart,
-deleteLichHocSuccess,
-deleteLichHocFailed
+    deleteLichHocSuccess,
+    deleteLichHocFailed,
 } = LichHoc.actions;
 
 export default LichHoc.reducer;

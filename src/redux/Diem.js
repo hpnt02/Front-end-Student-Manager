@@ -1,28 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const Diem = createSlice({
-    name:"diem",
+    name: 'diem',
     initialState: {
-        diem:{
-            diem:[],
-            isFetching: false,
-            error: false
-        },
-        diemtheomon:{
-            diemtheomon:[],
-            isFetching: false,
-            error: false
-        },
-        tmd:{
+        diem: {
+            diem: [],
             isFetching: false,
             error: false,
-            success: false
+        },
+        diemtheomon: {
+            diemtheomon: [],
+            isFetching: false,
+            error: false,
+        },
+        tmd: {
+            isFetching: false,
+            error: false,
+            success: false,
         },
     },
-    reducers:{
-        getDiemStart:(state) =>{
-            state.diem.isFetching = true
+    reducers: {
+        getDiemStart: (state) => {
+            state.diem.isFetching = true;
         },
         getDiemSuccess: (state, action) => {
             state.diem.isFetching = false;
@@ -33,8 +32,8 @@ const Diem = createSlice({
             state.diem.isFetching = false;
             state.diem.error = true;
         },
-         getDiemTheoMonStart:(state) =>{
-            state.diemtheomon.isFetching = true
+        getDiemTheoMonStart: (state) => {
+            state.diemtheomon.isFetching = true;
         },
         getDiemTheoMonSuccess: (state, action) => {
             state.diemtheomon.isFetching = false;
@@ -48,24 +47,29 @@ const Diem = createSlice({
         TMDiemStart: (state) => {
             state.tmd.isFetching = true;
         },
-       TMDiemSuccess: (state, action) => {
+        TMDiemSuccess: (state, action) => {
             state.tmd.isFetching = false;
             state.tmd.error = false;
-            state.tmd.success = true
+            state.tmd.success = true;
         },
-      TMDiemFailed: (state) => {
+        TMDiemFailed: (state) => {
             state.tmd.isFetching = false;
             state.tmd.error = true;
-            state.tmd.success = false
+            state.tmd.success = false;
         },
-    }
-})
+    },
+});
 
-export const { getDiemFailed, getDiemStart, getDiemSuccess,getDiemTheoMonStart,
+export const {
+    getDiemFailed,
+    getDiemStart,
+    getDiemSuccess,
+    getDiemTheoMonStart,
     getDiemTheoMonSuccess,
-    getDiemTheoMonFailed,TMDiemStart,
+    getDiemTheoMonFailed,
+    TMDiemStart,
     TMDiemSuccess,
-    TMDiemFailed
+    TMDiemFailed,
 } = Diem.actions;
 
 export default Diem.reducer;

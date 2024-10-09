@@ -36,7 +36,6 @@ function ThemMoiHS() {
         setGioiTinh(value);
     };
 
-    console.log('kiểm tra', process.env.REACT_APP_BASE_URL);
     const { success, error } = useSelector((state) => state.dshs.tmhs);
     useEffect(() => {
         if (success) {

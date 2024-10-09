@@ -1,17 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const VienChuc = createSlice({
-    name:"vienchuc",
+    name: 'vienchuc',
     initialState: {
-        vienchuc:{
-            vienchuc:null,
+        vienchuc: {
+            vienchuc: null,
             isFetching: false,
-            error: false
+            error: false,
         },
     },
-    reducers:{
-        getVienChucStart:(state) =>{
-            state.vienchuc.isFetching = true
+    reducers: {
+        getVienChucStart: (state) => {
+            state.vienchuc.isFetching = true;
         },
         getVienChucSuccess: (state, action) => {
             state.vienchuc.isFetching = false;
@@ -22,12 +22,9 @@ const VienChuc = createSlice({
             state.vienchuc.isFetching = false;
             state.vienchuc.error = true;
         },
-       
-      
-    }
-})
+    },
+});
 
-export const { getVienChucFailed, getVienChucStart, getVienChucSuccess,
-} = VienChuc.actions;
+export const { getVienChucFailed, getVienChucStart, getVienChucSuccess } = VienChuc.actions;
 
 export default VienChuc.reducer;

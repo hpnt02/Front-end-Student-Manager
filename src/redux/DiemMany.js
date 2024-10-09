@@ -1,36 +1,31 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const DiemMany = createSlice({
-    name:"diemMany",
+    name: 'diemMany',
     initialState: {
-        tmdMany:{
+        tmdMany: {
             isFetching: false,
             error: false,
-            success: false
+            success: false,
         },
     },
-    reducers:{
+    reducers: {
         TMManyStart: (state) => {
             state.tmdMany.isFetching = true;
         },
-       TMManySuccess: (state, action) => {
+        TMManySuccess: (state, action) => {
             state.tmdMany.isFetching = false;
             state.tmdMany.error = false;
-            state.tmdMany.success = true
+            state.tmdMany.success = true;
         },
-      TMManyFailed: (state) => {
+        TMManyFailed: (state) => {
             state.tmdMany.isFetching = false;
             state.tmdMany.error = true;
-            state.tmdMany.success = false
+            state.tmdMany.success = false;
         },
-    }
-})
+    },
+});
 
-export const { 
-TMManyStart,
-    TMManySuccess,
-    TMManyFailed
-} = DiemMany.actions;
+export const { TMManyStart, TMManySuccess, TMManyFailed } = DiemMany.actions;
 
 export default DiemMany.reducer;

@@ -1,18 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const LoaiDiem = createSlice({
-    name:"loaidiem",
+    name: 'loaidiem',
     initialState: {
-        loaidiem:{
-            loaidiem:[],
+        loaidiem: {
+            loaidiem: [],
             isFetching: false,
-            error: false
+            error: false,
         },
-      
     },
-    reducers:{
-        getLoaiDiemStart:(state) =>{
-            state.loaidiem.isFetching = true
+    reducers: {
+        getLoaiDiemStart: (state) => {
+            state.loaidiem.isFetching = true;
         },
         getLoaiDiemSuccess: (state, action) => {
             state.loaidiem.isFetching = false;
@@ -23,14 +22,9 @@ const LoaiDiem = createSlice({
             state.loaidiem.isFetching = false;
             state.loaidiem.error = true;
         },
+    },
+});
 
-    
-    }
-})
-
-export const { getLoaiDiemStart,
-    getLoaiDiemSuccess,
-    getLoaiDiemFailed
-} = LoaiDiem.actions;
+export const { getLoaiDiemStart, getLoaiDiemSuccess, getLoaiDiemFailed } = LoaiDiem.actions;
 
 export default LoaiDiem.reducer;

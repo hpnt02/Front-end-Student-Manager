@@ -1,18 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const HocKy = createSlice({
-    name:"namhoc",
+    name: 'namhoc',
     initialState: {
-        hocky:{
-            hocky:[],
+        hocky: {
+            hocky: [],
             isFetching: false,
-            error: false
+            error: false,
         },
-    
     },
-    reducers:{
-        getHocKyStart:(state) =>{
-            state.hocky.isFetching = true
+    reducers: {
+        getHocKyStart: (state) => {
+            state.hocky.isFetching = true;
         },
         getHocKySuccess: (state, action) => {
             state.hocky.isFetching = false;
@@ -23,12 +22,9 @@ const HocKy = createSlice({
             state.hocky.isFetching = false;
             state.hocky.error = true;
         },
-}})
+    },
+});
 
-export const { getHocKyStart,
-    getHocKySuccess,
-    getHocKyFailed,
-  
-} = HocKy.actions;
+export const { getHocKyStart, getHocKySuccess, getHocKyFailed } = HocKy.actions;
 
 export default HocKy.reducer;

@@ -1,43 +1,42 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const DSHS = createSlice({
-    name:"dshs",
+    name: 'dshs',
     initialState: {
-        dshs:{
-            dshs:[],
-            isFetching: false,
-            error: false
-        },
-        tmhs:{
+        dshs: {
+            dshs: [],
             isFetching: false,
             error: false,
-            success: false
         },
-        tmn:{
+        tmhs: {
             isFetching: false,
             error: false,
-            success: false
+            success: false,
         },
-        tmk:{
+        tmn: {
             isFetching: false,
             error: false,
-            success: false
+            success: false,
         },
-        AllNganh:{
-           AllNganh:[],
+        tmk: {
             isFetching: false,
-            error: false
+            error: false,
+            success: false,
         },
-        AllKhoa:{
-            AllKhoa:[],
-             isFetching: false,
-             error: false
-         }
+        AllNganh: {
+            AllNganh: [],
+            isFetching: false,
+            error: false,
+        },
+        AllKhoa: {
+            AllKhoa: [],
+            isFetching: false,
+            error: false,
+        },
     },
-    reducers:{
-        getDSHSStart:(state) =>{
-            state.dshs.isFetching = true
+    reducers: {
+        getDSHSStart: (state) => {
+            state.dshs.isFetching = true;
         },
         getDSHSSuccess: (state, action) => {
             state.dshs.isFetching = false;
@@ -53,18 +52,18 @@ const DSHS = createSlice({
             state.tmhs.error = false;
             state.tmhs.success = false;
         },
-       TMHSSuccess: (state, action) => {
+        TMHSSuccess: (state, action) => {
             state.tmhs.isFetching = false;
             state.tmhs.error = false;
-            state.tmhs.success = true
+            state.tmhs.success = true;
         },
-      TMHSFailed: (state) => {
+        TMHSFailed: (state) => {
             state.tmhs.isFetching = false;
             state.tmhs.error = true;
-            state.tmhs.success = false
+            state.tmhs.success = false;
         },
-        getNGANHStart:(state) =>{
-            state.AllNganh.isFetching = true
+        getNGANHStart: (state) => {
+            state.AllNganh.isFetching = true;
         },
         getNGANHSuccess: (state, action) => {
             state.AllNganh.isFetching = false;
@@ -75,8 +74,8 @@ const DSHS = createSlice({
             state.AllNganh.isFetching = false;
             state.AllNganh.error = true;
         },
-        getKhoaStart:(state) =>{
-            state.AllKhoa.isFetching = true
+        getKhoaStart: (state) => {
+            state.AllKhoa.isFetching = true;
         },
         getKhoaSuccess: (state, action) => {
             state.AllKhoa.isFetching = false;
@@ -87,141 +86,157 @@ const DSHS = createSlice({
             state.AllKhoa.isFetching = false;
             state.AllKhoa.error = true;
         },
-        deleteUserStart: (state) =>{
-            state.dshs.isFetching = true
+        deleteUserStart: (state) => {
+            state.dshs.isFetching = true;
         },
-        deleteUserSuccess: (state,action) => {
+        deleteUserSuccess: (state, action) => {
             state.dshs.isFetching = false;
             state.dshs.error = false;
-            state.dshs.dshs = state.dshs.dshs.items.filter(user => user._id !== action.payload);
+            state.dshs.dshs = state.dshs.dshs.items.filter((user) => user._id !== action.payload);
         },
-        deleteUserFailed: (state,action) => {
+        deleteUserFailed: (state, action) => {
             state.dshs.isFetching = false;
             state.dshs.error = true;
         },
-       UpdateStart: (state) =>{
-            state.dshs.isFetching = true
+        UpdateStart: (state) => {
+            state.dshs.isFetching = true;
         },
         UpdateSuccess: (state, action) => {
             state.dshs.isFetching = false;
             state.dshs.error = false;
-            const updatedUserIndex = state.dshs.dshs.items.findIndex(
-              (user) => user._id === action.payload._id
-            );
+            const updatedUserIndex = state.dshs.dshs.items.findIndex((user) => user._id === action.payload._id);
             if (updatedUserIndex !== -1) {
-              state.dshs.dshs[updatedUserIndex] = action.payload;
+                state.dshs.dshs[updatedUserIndex] = action.payload;
             }
-          },
-       UpdateFailed: (state,action) => {
+        },
+        UpdateFailed: (state, action) => {
             state.dshs.isFetching = false;
             state.dshs.error = true;
         },
-        UpdateNganhStart: (state) =>{
-            state.AllNganh.isFetching = true
+        UpdateNganhStart: (state) => {
+            state.AllNganh.isFetching = true;
         },
         UpdateNganhSuccess: (state, action) => {
             state.AllNganh.isFetching = false;
             state.AllNganh.error = false;
-            const updatedNganhIndex = state.AllNganh.AllNganh.findIndex(
-              (user) => user._id === action.payload._id
-            );
+            const updatedNganhIndex = state.AllNganh.AllNganh.findIndex((user) => user._id === action.payload._id);
             if (updatedNganhIndex !== -1) {
-              state.AllNganh.AllNganh[updatedNganhIndex] = action.payload;
+                state.AllNganh.AllNganh[updatedNganhIndex] = action.payload;
             }
-          },
-          UpdateNganhFailed: (state,action) => {
+        },
+        UpdateNganhFailed: (state, action) => {
             state.AllNganh.isFetching = false;
             state.AllNganh.error = true;
         },
-       
+
         TMNStart: (state) => {
             state.tmn.isFetching = true;
         },
-       TMNSuccess: (state, action) => {
+        TMNSuccess: (state, action) => {
             state.tmn.isFetching = false;
             state.tmn.error = false;
-            state.tmn.success = true
+            state.tmn.success = true;
         },
-      TMNFailed: (state) => {
+        TMNFailed: (state) => {
             state.tmn.isFetching = false;
             state.tmn.error = true;
-            state.tmn.success = false
+            state.tmn.success = false;
         },
-        deleteNganhStart: (state) =>{
-            state.AllNganh.isFetching = true
+        deleteNganhStart: (state) => {
+            state.AllNganh.isFetching = true;
         },
-        deleteNganhSuccess: (state,action) => {
+        deleteNganhSuccess: (state, action) => {
             state.AllNganh.isFetching = false;
             state.AllNganh.error = false;
-            state.AllNganh.AllNganh = state.AllNganh.AllNganh.filter(user => user._id !== action.payload);
+            state.AllNganh.AllNganh = state.AllNganh.AllNganh.filter((user) => user._id !== action.payload);
         },
-        deleteNganhFailed: (state,action) => {
+        deleteNganhFailed: (state, action) => {
             state.AllNganh.isFetching = false;
             state.AllNganh.error = true;
         },
         TMKStart: (state) => {
             state.tmk.isFetching = true;
         },
-       TMKSuccess: (state, action) => {
+        TMKSuccess: (state, action) => {
             state.tmk.isFetching = false;
             state.tmk.error = false;
-            state.tmk.success = true
+            state.tmk.success = true;
         },
-      TMKFailed: (state) => {
+        TMKFailed: (state) => {
             state.tmk.isFetching = false;
             state.tmk.error = true;
-            state.tmk.success = false
+            state.tmk.success = false;
         },
-        UpdateKhoaStart: (state) =>{
-            state.AllKhoa.isFetching = true
+        UpdateKhoaStart: (state) => {
+            state.AllKhoa.isFetching = true;
         },
         UpdateKhoaSuccess: (state, action) => {
             state.AllKhoa.isFetching = false;
             state.AllKhoa.error = false;
-            const updatedKhoaIndex = state.AllKhoa.AllKhoa.findIndex(
-              (user) => user._id === action.payload._id
-            );
+            const updatedKhoaIndex = state.AllKhoa.AllKhoa.findIndex((user) => user._id === action.payload._id);
             if (updatedKhoaIndex !== -1) {
-              state.AllKhoa.AllKhoa[updatedKhoaIndex] = action.payload;
+                state.AllKhoa.AllKhoa[updatedKhoaIndex] = action.payload;
             }
-          },
-          UpdateKhoaFailed: (state,action) => {
+        },
+        UpdateKhoaFailed: (state, action) => {
             state.AllKhoa.isFetching = false;
             state.AllKhoa.error = true;
         },
-        deleteKhoaStart: (state) =>{
-            state.AllKhoa.isFetching = true
+        deleteKhoaStart: (state) => {
+            state.AllKhoa.isFetching = true;
         },
-        deleteKhoaSuccess: (state,action) => {
+        deleteKhoaSuccess: (state, action) => {
             state.AllKhoa.isFetching = false;
             state.AllKhoa.error = false;
-            state.AllKhoa.AllKhoa = state.AllKhoa.AllKhoa.filter(user => user._id !== action.payload);
+            state.AllKhoa.AllKhoa = state.AllKhoa.AllKhoa.filter((user) => user._id !== action.payload);
         },
-        deleteKhoaFailed: (state,action) => {
+        deleteKhoaFailed: (state, action) => {
             state.AllKhoa.isFetching = false;
             state.AllKhoa.error = true;
         },
-    }
-})
+    },
+});
 
-export const { getDSHSFailed, getDSHSStart, getDSHSSuccess,TMHSFailed, TMHSStart, TMHSSuccess,
-    getNGANHFailed, getNGANHStart, getNGANHSuccess,getKhoaFailed, getKhoaStart, getKhoaSuccess,
-   deleteUserFailed,deleteUserStart,deleteUserSuccess,editUserStart,editUserSuccess,
-   editUserFailed,UpdateStart,
-   UpdateSuccess,
-   UpdateFailed, UpdateNganhStart,
-   UpdateNganhSuccess,
-   UpdateNganhFailed,TMNStart,
-   TMNSuccess,
-   TMNFailed,deleteNganhStart,
-   deleteNganhSuccess,
-   deleteNganhFailed, TMKStart,
-   TMKSuccess,
-   TMKFailed,UpdateKhoaStart,
-   UpdateKhoaSuccess,
-   UpdateKhoaFailed,deleteKhoaStart,
-   deleteKhoaSuccess,
-   deleteKhoaFailed
+export const {
+    getDSHSFailed,
+    getDSHSStart,
+    getDSHSSuccess,
+    TMHSFailed,
+    TMHSStart,
+    TMHSSuccess,
+    getNGANHFailed,
+    getNGANHStart,
+    getNGANHSuccess,
+    getKhoaFailed,
+    getKhoaStart,
+    getKhoaSuccess,
+    deleteUserFailed,
+    deleteUserStart,
+    deleteUserSuccess,
+    editUserStart,
+    editUserSuccess,
+    editUserFailed,
+    UpdateStart,
+    UpdateSuccess,
+    UpdateFailed,
+    UpdateNganhStart,
+    UpdateNganhSuccess,
+    UpdateNganhFailed,
+    TMNStart,
+    TMNSuccess,
+    TMNFailed,
+    deleteNganhStart,
+    deleteNganhSuccess,
+    deleteNganhFailed,
+    TMKStart,
+    TMKSuccess,
+    TMKFailed,
+    UpdateKhoaStart,
+    UpdateKhoaSuccess,
+    UpdateKhoaFailed,
+    deleteKhoaStart,
+    deleteKhoaSuccess,
+    deleteKhoaFailed,
 } = DSHS.actions;
 
 export default DSHS.reducer;

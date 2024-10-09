@@ -1,37 +1,31 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const TMLoiViPham = createSlice({
-    name:"tmloivipham",
+    name: 'tmloivipham',
     initialState: {
-        tmlvpham:{
+        tmlvpham: {
             isFetching: false,
             error: false,
-            success: false
+            success: false,
         },
     },
-    reducers:{
-   
+    reducers: {
         TMLVPStart: (state) => {
             state.tmlvpham.isFetching = true;
         },
-       TMLVPSuccess: (state, action) => {
+        TMLVPSuccess: (state, action) => {
             state.tmlvpham.isFetching = false;
             state.tmlvpham.error = false;
-            state.tmlvpham.success = true
+            state.tmlvpham.success = true;
         },
-      TMLVPFailed: (state) => {
+        TMLVPFailed: (state) => {
             state.tmlvpham.isFetching = false;
             state.tmlvpham.error = true;
-            state.tmlvpham.success = false
+            state.tmlvpham.success = false;
         },
-    
-    }
-})
+    },
+});
 
-export const { 
-    TMLVPStart,
-TMLVPSuccess,
-TMLVPFailed
-} = TMLoiViPham.actions;
+export const { TMLVPStart, TMLVPSuccess, TMLVPFailed } = TMLoiViPham.actions;
 
 export default TMLoiViPham.reducer;

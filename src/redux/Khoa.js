@@ -1,17 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const Khoa = createSlice({
-    name:"khoa",
+    name: 'khoa',
     initialState: {
-        khoa:{
-            khoa:null,
+        khoa: {
+            khoa: null,
             isFetching: false,
-            error: false
+            error: false,
         },
     },
-    reducers:{
-        getKhoaStart:(state) =>{
-            state.khoa.isFetching = true
+    reducers: {
+        getKhoaStart: (state) => {
+            state.khoa.isFetching = true;
         },
         getKhoaSuccess: (state, action) => {
             state.khoa.isFetching = false;
@@ -22,12 +22,9 @@ const Khoa = createSlice({
             state.khoa.isFetching = false;
             state.khoa.error = true;
         },
-       
-      
-    }
-})
+    },
+});
 
-export const { getKhoaFailed, getKhoaStart, getKhoaSuccess,
-} = Khoa.actions;
+export const { getKhoaFailed, getKhoaStart, getKhoaSuccess } = Khoa.actions;
 
 export default Khoa.reducer;

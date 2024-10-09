@@ -12,10 +12,8 @@ const cx = classNames.bind(styles);
 
 export default function DataGridDemo({ columns, rows, data, ...prop }) {
     const [page, setPage] = useState(1);
-
     // const a = prop.columnGroupingModel
     const pageSize = 10;
-
     const arr = [
         {
             title: '10',

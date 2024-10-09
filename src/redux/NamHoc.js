@@ -1,18 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const NamHoc = createSlice({
-    name:"namhoc",
+    name: 'namhoc',
     initialState: {
-        namhoc:{
-            namhoc:[],
+        namhoc: {
+            namhoc: [],
             isFetching: false,
-            error: false
+            error: false,
         },
-    
     },
-    reducers:{
-        getNamHocStart:(state) =>{
-            state.namhoc.isFetching = true
+    reducers: {
+        getNamHocStart: (state) => {
+            state.namhoc.isFetching = true;
         },
         getNamHocSuccess: (state, action) => {
             state.namhoc.isFetching = false;
@@ -23,12 +22,9 @@ const NamHoc = createSlice({
             state.namhoc.isFetching = false;
             state.namhoc.error = true;
         },
-}})
+    },
+});
 
-export const { getNamHocStart,
-    getNamHocSuccess,
-    getNamHocFailed,
-  
-} = NamHoc.actions;
+export const { getNamHocStart, getNamHocSuccess, getNamHocFailed } = NamHoc.actions;
 
 export default NamHoc.reducer;

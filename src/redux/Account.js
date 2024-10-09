@@ -1,19 +1,17 @@
-
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const Account = createSlice({
-    name:"account",
+    name: 'account',
     initialState: {
-        account:{
-            account:[],
+        account: {
+            account: [],
             isFetching: false,
-            error: false
+            error: false,
         },
     },
-    reducers:{
-        getAccountStart:(state) =>{
-            state.account.isFetching = true
+    reducers: {
+        getAccountStart: (state) => {
+            state.account.isFetching = true;
         },
         getAccountSuccess: (state, action) => {
             state.account.isFetching = false;
@@ -24,14 +22,9 @@ const Account = createSlice({
             state.account.isFetching = false;
             state.account.error = true;
         },
-       
-      
-    }
-})
+    },
+});
 
-export const { getAccountStart,
-    getAccountSuccess,
-    getAccountFailed
-} = Account.actions;
+export const { getAccountStart, getAccountSuccess, getAccountFailed } = Account.actions;
 
 export default Account.reducer;

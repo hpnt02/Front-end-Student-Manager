@@ -1,11 +1,7 @@
-import QLHS from "../../QLHS";
-
+import QLHS from '../../QLHS';
 
 function KHHTHS() {
-    return ( 
-       
-        <QLHS/>
-     );
+    return <QLHS />;
 }
 
 export default KHHTHS;

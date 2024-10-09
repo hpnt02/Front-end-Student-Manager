@@ -14,8 +14,7 @@ const cx = classNames.bind(styles);
 function Header() {
     const user = useSelector((state) => state.auth.login?.currentUser);
     const accessToken = user?.accessToken
-    const id = user?._id
-   
+    const id = user?._id 
     const dispatch = useDispatch()
     const navigate = useNavigate()
      let axiosJWT = createAxios(user, dispatch, logoutSuccess)
@@ -40,23 +39,15 @@ function Header() {
                         <strong>Trang chủ</strong>
                     </Link>
                     <div className={cx('header-hello')}>
-                    {user?.ChucVu?.MaChucVu === "1" && (
-    <span>
-      <strong>Chào:</strong>  {user.VienChuc.HoVC} {user.VienChuc.TenVC}
-    </span>
-  )}
-  {user?.ChucVu?.MaChucVu === "2" && (
-    <span>
-      <strong>Chào:</strong> {user.GiaoVien.HoGV} {user.GiaoVien.TenGV}
-    </span>
-  )}
-  {user?.ChucVu?.MaChucVu === "3" && (
-    <span>
-      <strong>Chào:</strong> {user.HocSinh.HoHS} {user.HocSinh.TenHS}
-    </span>
-  )}
-               
-  
+                        {user?.ChucVu?.MaChucVu === "1" && (
+                          <span><strong>Chào:</strong>  {user.VienChuc.HoVC} {user.VienChuc.TenVC}</span>
+                        )}
+                        {user?.ChucVu?.MaChucVu === "2" && (
+                          <span><strong>Chào:</strong> {user.GiaoVien.HoGV} {user.GiaoVien.TenGV}</span>
+                        )}
+                        {user?.ChucVu?.MaChucVu === "3" && (
+                          <span><strong>Chào:</strong> {user.HocSinh.HoHS} {user.HocSinh.TenHS}</span>
+                        )}
                     </div>
                     <div className={cx('logout')} onClick={handleLogout}>
                         <Link>Đăng xuất</Link>

@@ -1,22 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const LoiViPham = createSlice({
-    name:"loivipham",
+    name: 'loivipham',
     initialState: {
-        loivipham:{
-            loivipham:[],
-            isFetching: false,
-            error: false
-        },
-        tmlvpham:{
+        loivipham: {
+            loivipham: [],
             isFetching: false,
             error: false,
-            success: false
+        },
+        tmlvpham: {
+            isFetching: false,
+            error: false,
+            success: false,
         },
     },
-    reducers:{
-        getLoiViPhamStart:(state) =>{
-            state.loivipham.isFetching = true
+    reducers: {
+        getLoiViPhamStart: (state) => {
+            state.loivipham.isFetching = true;
         },
         getLoiViPhamSuccess: (state, action) => {
             state.loivipham.isFetching = false;
@@ -30,40 +30,41 @@ const LoiViPham = createSlice({
         TMLVPStart: (state) => {
             state.tmlvpham.isFetching = true;
         },
-       TMLVPSuccess: (state, action) => {
+        TMLVPSuccess: (state, action) => {
             state.tmlvpham.isFetching = false;
             state.tmlvpham.error = false;
-            state.tmlvpham.success = true
+            state.tmlvpham.success = true;
         },
-      TMLVPFailed: (state) => {
+        TMLVPFailed: (state) => {
             state.tmlvpham.isFetching = false;
             state.tmlvpham.error = true;
-            state.tmlvpham.success = false
+            state.tmlvpham.success = false;
         },
-        deleteLoiViPhamStart: (state) =>{
-            state.loivipham.isFetching = true
+        deleteLoiViPhamStart: (state) => {
+            state.loivipham.isFetching = true;
         },
-        deleteLoiViPhamSuccess: (state,action) => {
+        deleteLoiViPhamSuccess: (state, action) => {
             state.loivipham.isFetching = false;
             state.loivipham.error = false;
-            state.loivipham.loivipham = state.loivipham.loivipham.items.filter(user => user._id !== action.payload);
+            state.loivipham.loivipham = state.loivipham.loivipham.items.filter((user) => user._id !== action.payload);
         },
-        deleteLoiViPhamFailed: (state,action) => {
+        deleteLoiViPhamFailed: (state, action) => {
             state.loivipham.isFetching = false;
             state.loivipham.error = true;
         },
-    }
-})
+    },
+});
 
-export const { getLoiViPhamStart,
+export const {
+    getLoiViPhamStart,
     getLoiViPhamSuccess,
     getLoiViPhamFailed,
     TMLVPStart,
-TMLVPSuccess,
-TMLVPFailed,
-deleteLoiViPhamStart,
-deleteLoiViPhamSuccess,
-deleteLoiViPhamFailed
+    TMLVPSuccess,
+    TMLVPFailed,
+    deleteLoiViPhamStart,
+    deleteLoiViPhamSuccess,
+    deleteLoiViPhamFailed,
 } = LoiViPham.actions;
 
 export default LoiViPham.reducer;

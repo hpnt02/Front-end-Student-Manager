@@ -4,7 +4,7 @@ import styles from './CTDT.module.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {getMonHoc, getKhoa,getNGANH } from "~/redux/apiAdmin/apiAdmin";
-import DataGridDemo from "~/components/Test";
+import DataGridDemo from "~/components/Table";
 import ToTal from "~/components/MonHocChung/TongSoKT";
 
 const cx = classNames.bind(styles)

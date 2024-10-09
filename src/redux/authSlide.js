@@ -8,10 +8,10 @@ const authSlice = createSlice({
             isFetching: false,
             error: false,
         },
-        register:{
+        register: {
             isFetching: false,
             error: false,
-            success: false
+            success: false,
         },
     },
     reducers: {
@@ -27,37 +27,44 @@ const authSlice = createSlice({
             state.login.isFetching = false;
             state.login.error = true;
         },
-       registerStart: (state) => {
+        registerStart: (state) => {
             state.register.isFetching = true;
         },
-       registerSuccess: (state, action) => {
+        registerSuccess: (state, action) => {
             state.register.isFetching = false;
             state.register.error = false;
-            state.register.success = true
+            state.register.success = true;
         },
-       registerFailed: (state) => {
+        registerFailed: (state) => {
             state.register.isFetching = false;
             state.register.error = true;
-            state.register.success = false
+            state.register.success = false;
         },
-       logoutStart: (state) => {
+        logoutStart: (state) => {
             state.login.isFetching = true;
         },
-       logoutSuccess: (state, action) => {
+        logoutSuccess: (state, action) => {
             state.login.isFetching = false;
             state.login.currentUser = null;
             state.login.error = false;
         },
-       logoutFailed: (state) => {
+        logoutFailed: (state) => {
             state.login.isFetching = false;
             state.login.error = true;
         },
     },
 });
 
-export const { loginFailed, loginStart, loginSuccess,
-    registerFailed, registerStart, registerSuccess, logoutStart,
+export const {
+    loginFailed,
+    loginStart,
+    loginSuccess,
+    registerFailed,
+    registerStart,
+    registerSuccess,
+    logoutStart,
     logoutSuccess,
-    logoutFailed} = authSlice.actions;
+    logoutFailed,
+} = authSlice.actions;
 
 export default authSlice.reducer;

@@ -17,10 +17,8 @@ export default function Input({label,onChange, placeholder, ...prop}) {
           placeholder={placeholder}
           multiline
           onChange={onChange}
-          value={prop.value}
-         
+          value={prop.value}      
         />
-
     </Box>
   );
 }
